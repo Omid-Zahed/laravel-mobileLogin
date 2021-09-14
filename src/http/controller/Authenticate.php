@@ -8,6 +8,7 @@ use MobileLogin\http\Requests\RequestMobileNumber;
 
 use MobileLogin\MobileLogin;
 use MobileLogin\Models\SmsCode;
+use mysql_xdevapi\Exception;
 
 class Authenticate extends Controller
 {
@@ -33,6 +34,23 @@ class Authenticate extends Controller
         }
     }
     public function verify(RequestCodeNumber $request){
+        try {
+                 $code  =$request->get('code');
+                 $mobile=$request->get("mobile");
+                 $where =[["mobile","=",$mobile],["code","=",$code],["expire_at",">",Carbon::now()]];
+
+                 /**
+                 * @var SmsCode $smsCodeModel
+                 */
+                 $smsCodeModel=SmsCode::where($where)->get()[0]??null;
+                 if ($smsCodeModel){
+                     $smsCodeModel->delete();
+                     return   $this->mobileLogin->after_confirm_mobile($mobile);
+                     }
+                 else return response(["status"=>"false","message"=>__("dont found")],401);
+        }
+        catch (\Exception $exception)
+        { return  response(["error"=>$exception->getMessage()],500);}
 
     }
 }

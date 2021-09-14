@@ -19,4 +19,9 @@ class MobileLogin
 
     }
 
+    public function after_confirm_mobile($mobile){
+        //todo do some thing
+        return ["status"=>"ok"];
+    }
+
 }

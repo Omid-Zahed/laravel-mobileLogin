@@ -23,7 +23,13 @@ class RequestCodeNumber  extends FormRequest
      */
     public function rules()
     {
-        return ["code"=>"required|max:10|string"];
+        return [
+            "code"=>"required|max:10|string",
+            "mobile"=>"required|max:10|regex:/^9[0-9]{9}$/i"
+        ];
     }
-
+    public function messages()
+    {
+        return ["mobile.regex"=>"mobile format in wrong"];
+    }
 }
