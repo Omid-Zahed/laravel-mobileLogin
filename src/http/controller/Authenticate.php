@@ -6,6 +6,7 @@ use Carbon\Carbon;
 use MobileLogin\http\Requests\RequestCodeNumber;
 use MobileLogin\http\Requests\RequestMobileNumber;
 
+use MobileLogin\jobs\SendSmsJob;
 use MobileLogin\MobileLogin;
 use MobileLogin\Models\SmsCode;
 
@@ -26,6 +27,7 @@ class Authenticate extends Controller
             $expire_at=Carbon::now()->addMinute(config('MobileLogin.code_expire_after_min',5));
 
             (new SmsCode(["mobile"=>$mobile_number,'code'=>$sms_code,"expire_at"=>$expire_at]))->save();
+            $this->dispatch(new SendSmsJob($this->mobileLogin->get_sms_deliver(),$mobile_number,$sms_code));
             return response(["status"=>"ok"],201);
         }
         catch (\Exception $exception){

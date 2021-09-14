@@ -1,6 +1,6 @@
 <?php
 
-namespace Login_with_sms\interfaces;
+namespace MobileLogin\interfaces;
 
 interface SmsDeliver
 {

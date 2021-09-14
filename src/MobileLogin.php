@@ -1,6 +1,6 @@
 <?php
 namespace MobileLogin;
-use Login_with_sms\interfaces\SmsDeliver;
+use MobileLogin\SmsDelivers\SimpleSmsDeliver;
 
 
 class MobileLogin
@@ -13,15 +13,12 @@ class MobileLogin
     }
 
     /**
-     * @return SmsDeliver
+     * @return SimpleSmsDeliver
      */
     public function get_sms_deliver(){
-
+        return new SimpleSmsDeliver();
     }
 
-    public function after_confirm_mobile($mobile){
-        //todo do some thing
-        return ["status"=>"ok"];
-    }
+
 
 }

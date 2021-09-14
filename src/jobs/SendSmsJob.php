@@ -1,6 +1,6 @@
 <?php
 
-namespace Login_with_sms\jobs;
+namespace MobileLogin\jobs;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldBeUnique;
@@ -8,9 +8,10 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
-use Login_with_sms\interfaces\SmsDeliver;
+use MobileLogin\interfaces\SmsDeliver;
 
-class SendSms implements ShouldQueue
+
+class SendSmsJob implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
