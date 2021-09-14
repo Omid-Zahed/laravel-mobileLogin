@@ -24,9 +24,6 @@ class Authenticate extends Controller
         try {
             $mobile_number=$requestMobileNumber->get("mobile");
             $sms_code=$this->mobileLogin->create_sms_code(config("mobileLogin.smsCodeLength"),4);
-            $expire_at=Carbon::now()->addMinute(config('MobileLogin.code_expire_after_min',5));
-
-            (new SmsCode(["mobile"=>$mobile_number,'code'=>$sms_code,"expire_at"=>$expire_at]))->save();
             $this->dispatch(new SendSmsJob($this->mobileLogin->get_sms_deliver(),$mobile_number,$sms_code));
             return response(["status"=>"ok"],201);
         }
