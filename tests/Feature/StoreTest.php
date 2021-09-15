@@ -1,6 +1,6 @@
 <?php
 
-namespace MobileLogin\tests\Feature;
+namespace  Omid\LaraveMoblieLogin\tests\Feature;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;

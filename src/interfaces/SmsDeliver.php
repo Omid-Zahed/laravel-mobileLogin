@@ -1,6 +1,6 @@
 <?php
 
-namespace MobileLogin\interfaces;
+namespace  Omid\LaraveMoblieLogin\interfaces;
 
 interface SmsDeliver
 {

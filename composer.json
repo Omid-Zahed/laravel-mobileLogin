@@ -1,0 +1,16 @@
+{
+    "name": "omid/larave-moblie-login",
+    "description": "login with mobile in laravel",
+    "autoload": {
+        "psr-4": {
+            "Omid\\LaraveMoblieLogin\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Omid-Zahed",
+            "email": "omid98.ir@gmail.com"
+        }
+    ],
+    "require": {}
+}

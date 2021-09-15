@@ -1,5 +1,5 @@
 <?php
-namespace MobileLogin ;
+namespace  Omid\LaraveMoblieLogin ;
 use Illuminate\Support\ServiceProvider;
 
 class MobileLoginServiceProvider extends ServiceProvider

@@ -1,6 +1,6 @@
 <?php
-namespace MobileLogin;
-use MobileLogin\SmsDelivers\SimpleSmsDeliver;
+namespace  Omid\LaraveMoblieLogin;
+use  Omid\LaraveMoblieLogin\SmsDelivers\SimpleSmsDeliver;
 
 
 class MobileLogin
