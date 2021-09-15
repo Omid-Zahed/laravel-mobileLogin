@@ -1,5 +1,5 @@
 {
-    "name": "omid/larave-moblie-login",
+    "name": "omidzahed/larave-moblie-login",
     "description": "login with mobile in laravel",
     "autoload": {
         "psr-4": {
