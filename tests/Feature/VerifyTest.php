@@ -1,10 +1,10 @@
 <?php
 
-namespace MobileLogin\tests\Feature;
+namespace  Omid\LaraveMoblieLogin\tests\Feature;
 
 use Carbon\Carbon;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use MobileLogin\Models\SmsCode;
+use  Omid\LaraveMoblieLogin\Models\SmsCode;
 use Tests\TestCase;
 
 class VerifyTest  extends TestCase

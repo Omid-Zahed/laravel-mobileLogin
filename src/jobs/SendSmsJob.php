@@ -1,6 +1,6 @@
 <?php
 
-namespace MobileLogin\jobs;
+namespace  Omid\LaraveMoblieLogin\jobs;
 
 use Carbon\Carbon;
 use Illuminate\Bus\Queueable;
@@ -9,8 +9,8 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
-use MobileLogin\interfaces\SmsDeliver;
-use MobileLogin\Models\SmsCode;
+use  Omid\LaraveMoblieLogin\interfaces\SmsDeliver;
+use  Omid\LaraveMoblieLogin\Models\SmsCode;
 
 
 class SendSmsJob implements ShouldQueue

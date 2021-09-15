@@ -1,6 +1,6 @@
 <?php
 
-namespace MobileLogin\http\Requests;
+namespace  Omid\LaraveMoblieLogin\http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 

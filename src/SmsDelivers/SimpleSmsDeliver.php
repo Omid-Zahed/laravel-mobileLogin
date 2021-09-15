@@ -1,8 +1,8 @@
 <?php
 
-namespace MobileLogin\SmsDelivers;
+namespace  Omid\LaraveMoblieLogin\SmsDelivers;
 
-use MobileLogin\interfaces\SmsDeliver;
+use  Omid\LaraveMoblieLogin\interfaces\SmsDeliver;
 
 class SimpleSmsDeliver implements SmsDeliver
 {

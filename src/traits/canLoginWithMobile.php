@@ -1,6 +1,6 @@
 <?php
 
-namespace MobileLogin\traits;
+namespace  Omid\LaraveMoblieLogin\traits;
 
 trait canLoginWithMobile
 {

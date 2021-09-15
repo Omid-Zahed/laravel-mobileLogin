@@ -1,6 +1,6 @@
 <?php
 
-namespace MobileLogin\Models;
+namespace  Omid\LaraveMoblieLogin\Models;
 
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\HasFactory;

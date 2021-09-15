@@ -1,14 +1,14 @@
 <?php
 
-namespace MobileLogin\http\controller;
+namespace  Omid\LaraveMoblieLogin\http\controller;
 use App\Http\Controllers\Controller;
 use Carbon\Carbon;
-use MobileLogin\http\Requests\RequestCodeNumber;
-use MobileLogin\http\Requests\RequestMobileNumber;
+use  Omid\LaraveMoblieLogin\http\Requests\RequestCodeNumber;
+use  Omid\LaraveMoblieLogin\http\Requests\RequestMobileNumber;
 
-use MobileLogin\jobs\SendSmsJob;
-use MobileLogin\MobileLogin;
-use MobileLogin\Models\SmsCode;
+use  Omid\LaraveMoblieLogin\jobs\SendSmsJob;
+use  Omid\LaraveMoblieLogin\MobileLogin;
+use  Omid\LaraveMoblieLogin\Models\SmsCode;
 
 class Authenticate extends Controller
 {
